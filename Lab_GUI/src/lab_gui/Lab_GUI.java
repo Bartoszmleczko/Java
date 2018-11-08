@@ -14,7 +14,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import javax.swing.*;
-import sun.security.x509.X500Name;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
 
 public class Lab_GUI {
 
@@ -26,29 +28,34 @@ public class Lab_GUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new FlowLayout(FlowLayout.LEFT, 40, 40));
         JPanel panel = new JPanel();
-
         JLabel label = new JLabel();
+        
         label.setDisplayedMnemonic(KeyEvent.VK_N);
-
+        
+        
+        
         JTextField textField = new JTextField(" ", 15);
         textField.setHorizontalAlignment(JTextField.LEFT);
         Container ContentPane = frame.getContentPane();
+        
 
-        DefaultListModel<String> listModel = new DefaultListModel<>();
-
+        DefaultListModel<String> listModel = new DefaultListModel<>();      
         JList countryList = new JList<>(listModel);
 
         textField.addActionListener(new java.awt.event.ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 listModel.addElement(textField.getText());
-
-                JOptionPane.showMessageDialog(null, "Wpisano");
+                textField.setText("");
             }
         }
         );
-
-        JButton confirmButton = new JButton("Dodaj element");
+            
+        //zad5
+       
+     
+     
+        JButton confirmButton = new JButton("Dodaj element");                   //zad 2-4 zdarzenia
         confirmButton.addActionListener(new ActionListener() {
 
             @Override
@@ -104,32 +111,21 @@ public class Lab_GUI {
             }
         });
         
+
         JButton findAndRemoveButton= new JButton("Usuń element o tej treści");
        findAndRemoveButton.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                int sizeOfList = listModel.getSize();
-               /* int toDelete = 0;
-                String text = textField.getText();
-                if(listModel.get(0).equals(text)){
-                    listModel.remove(0);
-                    listModel.setSize(-1);
-                }
-                else{
-               for(int i=1; i<=sizeOfList; i++){
-                        if(listModel.get(i).equals(text)){
-                            listModel.remove(i);
-                            listModel.setSize(listModel.getSize()-1);
-                        }}
-                }*/
+                listModel.removeElement(textField.getText());
                 textField.setText("");
                 
             }
         }) ;
-        
-        
        
+       
+   
+        
         label.setLabelFor(textField);
         panel.add(label);
         panel.add(textField);
@@ -146,7 +142,21 @@ public class Lab_GUI {
 
         countryList.setSize(200, 200);
         countryList.setVisible(true);
-        countryList.setVisible(true);
+
+       // zad6 zad = new zad6();
+        //zad.start();
+        
+       // Zad6Slider zad6s = new Zad6Slider();
+       // zad6s.start();
+        
+        //Zad8 zad8 = new Zad8();
+        //zad8.start();
+        
+        //Zad9 zad9 = new Zad9();
+     // zad9.start();
+        
+        Zad10 zad10 = new Zad10();
+       zad10.start();
     }
 
 }
