@@ -477,7 +477,7 @@ public class MainWindow extends Application {
 
             @Override
             public void handle(ActionEvent t) {
-                String musicFile = "anniversary.wav";     // For example
+                String musicFile = "Master Bounce_0002.wav"; 
 
                 Media sound = new Media(new File(musicFile).toURI().toString());
                 final MediaPlayer mediaPlayer = new MediaPlayer(sound);
@@ -487,7 +487,7 @@ public class MainWindow extends Application {
                     @Override
                     public void handle(ActionEvent t) {
                         mediaPlayer.stop();
-                        String musicFile = "goj.wav";
+                        String musicFile = "Master Bounce_0002.wav";
                         Media sound = new Media(new File(musicFile).toURI().toString());
                         final MediaPlayer mediaPlayer = new MediaPlayer(sound);
                         mediaPlayer.play();
