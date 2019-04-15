@@ -1,0 +1,80 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2019-01-16, 14:04:53
+    Author     : Bartosz
+*/
+
+.button{
+    -fx-font-style: oblique;
+    -fx-font: 16px "Arial"; 
+    -fx-padding: 10;
+    -fx-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -fx-border-style: solid;
+    -fx-border-color: "black";
+
+  
+    -fx-border-width: 2px;
+    -fx-transform: perspective(1px) translateZ(0);
+    -fx-alignment: CENTER;
+    margin-top: 20px;
+    -fx-margin-left: 10px;
+}
+.button:hover{
+    -fx-transform: scale(1.1);
+}
+#root{
+    -fx-background-color: linear-gradient(to left, #000000 0%, #990000 100%);
+
+
+}
+.text-field{
+    -fx-font-style: oblique;
+    -fx-font: 16px "Arial"; 
+    -fx-alignment: CENTER;
+}
+.list-view{
+    -fx-background-color: #F0F8FF;
+    -fx-font: 16px "Arial"; 
+    -fx-font-style: oblique;
+    -fx-font-weight: bold;
+    -fx-color:"white";
+    -fx-padding: 10;
+    -fx-border-style: solid;
+    -fx-width: 50%;
+    margin-left: 10px;  
+    -fx-margin-top: 20px;
+}
+#box{
+    -fx-background-color: linear-gradient(to left, #000000 0%, #990000 100%);
+}
+#mInfoButton{
+    -fx-margin-top: 20px;
+}
+.label{
+    -fx-border-style: solid;
+    -fx-border-width: 3px; 
+    -fx-font-style: oblique;
+    -fx-font: 16px "Arial"; 
+    -fx-padding: 10;
+    -fx-background-color:white;
+        margin-left: 10px;  
+}
+
+.list-cell:odd {
+
+    -fx-background-color: linear-gradient(to right, #3333cc -28%, #cc0000 100%);
+}
+.list-cell:even {
+
+    -fx-background-color: linear-gradient(to left, #33ccff -28%, #cc0000 100%);
+}
+.list-cell:checked{
+    color: black;
+}
+.pane{
+    -fx-margin-top: 20px;
+}
